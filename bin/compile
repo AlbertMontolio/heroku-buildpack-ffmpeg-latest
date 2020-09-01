@@ -22,7 +22,9 @@ echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:${HOME}/vendor/ffmpeg"' >> $PROFILE_PATH
-echo "displaying path"
+echo "displaying $PATH"
 echo $PATH
-echo '$(which ffmpeg)'
+echo 'displaying $(which ffmpeg)'
 echo $(which ffmpeg)
+echo "displaying $PROFILE_PATH"
+echo $PROFILE_PATH

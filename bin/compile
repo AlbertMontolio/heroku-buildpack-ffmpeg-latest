@@ -19,10 +19,10 @@ cd ffmpeg
 curl -L --silent $DOWNLOAD_URL | tar xJ --strip-components=1
 
 echo "exporting PATH" | indent
+PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:${HOME}/vendor/ffmpeg"' >> $PROFILE_PATH
 echo "displaying path"
 echo $PATH
 echo '$(which ffmpeg)'
 echo $(which ffmpeg)
-PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
-mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:${HOME}/vendor/ffmpeg"' >> $PROFILE_PATH
